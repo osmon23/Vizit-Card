@@ -8,8 +8,6 @@ services:
       - 80:8000
     networks:
       - my-network
-    depends_on:
-      - db
     env_file:
       - .env
 
