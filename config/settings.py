@@ -31,6 +31,9 @@ ALLOWED_HOSTS = env_config('ALLOWED_HOSTS').split(',')
 
 
 # Application definition
+MY_APPS = [
+    'apps.cards'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+] + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -107,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'UTC+6'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
